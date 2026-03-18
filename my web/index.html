@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>월드푸드 캘린더 | 전 세계 미식 가이드</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">월드푸드 캘린더</div>
+        <div class="menu">탐색하기 레시피 소개</div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="note orange-note">
+                <p>오늘의 추천:</p>
+                <h2 id="today-title">맛있는 세계 여행</h2>
+                <p id="today-recipe">아래 음식을 클릭하여 레시피를 확인하세요!</p>
+            </div>
+            <div class="sticker green-sticker">GLOBAL FOOD</div>
+        </section>
+
+        <section class="filters">
+            <div class="filter-group">
+                <span>나라별:</span>
+                <button class="filter-btn active" data-filter="all">전체</button>
+                <button class="filter-btn" data-filter="korea">한국</button>
+                <button class="filter-btn" data-filter="japan">일본</button>
+                <button class="filter-btn" data-filter="italy">이탈리아</button>
+                <button class="filter-btn" data-filter="france">프랑스</button>
+                <button class="filter-btn" data-filter="thailand">태국</button>
+                <button class="filter-btn" data-filter="usa">미국</button>
+                <button class="filter-btn" data-filter="china">중국</button>
+                <button class="filter-btn" data-filter="mexico">멕시코</button>
+            </div>
+            <div class="filter-group">
+                <span>계절별:</span>
+                <button class="filter-btn" data-filter="spring">봄</button>
+                <button class="filter-btn" data-filter="summer">여름</button>
+                <button class="filter-btn" data-filter="autumn">가을</button>
+                <button class="filter-btn" data-filter="winter">겨울</button>
+            </div>
+        </section>
+
+        <section class="food-grid" id="food-container"></section>
+    </main>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title">음식 이름</h2>
+            <p id="modal-desc"></p>
+            <hr>
+            <h4>👨‍🍳 간단 레시피</h4>
+            <p id="modal-recipe"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
